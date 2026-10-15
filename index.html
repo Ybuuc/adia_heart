@@ -78,6 +78,7 @@ footer span{color:#e78bad;margin:0 7px}
   <title id="cake-title">Торт с днём рождения для Адии</title>
   <desc id="cake-desc">Трёхъярусный розовый торт со свечами. Свечи можно задувать и зажигать.</desc>
 
+  <g id="cake-body">
   <!-- тарелка -->
   <ellipse cx="320" cy="452" rx="272" ry="24" fill="#2e1a2b"/>
   <ellipse cx="320" cy="446" rx="262" ry="20" fill="#3d2338"/>
@@ -116,29 +117,35 @@ footer span{color:#e78bad;margin:0 7px}
     <rect x="412" y="382" width="10" height="3" rx="1.5" fill="#c3a6ff" transform="rotate(25 417 383)"/>
   </g>
 
+  </g>
   <!-- свечи: кликабельные -->
   <g id="candles">
     <g class="candle" tabindex="0" role="button" aria-label="Свеча, нажми чтобы задуть или зажечь" data-i="0">
+      <rect class="hit" x="186" y="104" width="28" height="108" fill="transparent"/>
       <rect x="194" y="150" width="12" height="52" rx="3" fill="#ffd166"/>
       <line class="wick" x1="200" y1="150" x2="200" y2="144" stroke="#4a2c3d" stroke-width="2"/>
       <g class="flame-wrap"><ellipse class="flame" cx="200" cy="130" rx="7" ry="13" fill="#ffb347"/><ellipse class="flame" cx="200" cy="133" rx="3.5" ry="7" fill="#fff3c4"/></g>
     </g>
     <g class="candle" tabindex="0" role="button" aria-label="Свеча, нажми чтобы задуть или зажечь" data-i="1">
+      <rect class="hit" x="241" y="104" width="28" height="108" fill="transparent"/>
       <rect x="249" y="150" width="12" height="52" rx="3" fill="#9ad1f5"/>
       <line class="wick" x1="255" y1="150" x2="255" y2="144" stroke="#4a2c3d" stroke-width="2"/>
       <g class="flame-wrap"><ellipse class="flame" cx="255" cy="130" rx="7" ry="13" fill="#ffb347"/><ellipse class="flame" cx="255" cy="133" rx="3.5" ry="7" fill="#fff3c4"/></g>
     </g>
     <g class="candle" tabindex="0" role="button" aria-label="Свеча, нажми чтобы задуть или зажечь" data-i="2">
+      <rect class="hit" x="306" y="104" width="28" height="108" fill="transparent"/>
       <rect x="314" y="142" width="12" height="60" rx="3" fill="#c3a6ff"/>
       <line class="wick" x1="320" y1="142" x2="320" y2="136" stroke="#4a2c3d" stroke-width="2"/>
       <g class="flame-wrap"><ellipse class="flame" cx="320" cy="122" rx="7" ry="13" fill="#ffb347"/><ellipse class="flame" cx="320" cy="125" rx="3.5" ry="7" fill="#fff3c4"/></g>
     </g>
     <g class="candle" tabindex="0" role="button" aria-label="Свеча, нажми чтобы задуть или зажечь" data-i="3">
+      <rect class="hit" x="371" y="104" width="28" height="108" fill="transparent"/>
       <rect x="379" y="150" width="12" height="52" rx="3" fill="#ffd166"/>
       <line class="wick" x1="385" y1="150" x2="385" y2="144" stroke="#4a2c3d" stroke-width="2"/>
       <g class="flame-wrap"><ellipse class="flame" cx="385" cy="130" rx="7" ry="13" fill="#ffb347"/><ellipse class="flame" cx="385" cy="133" rx="3.5" ry="7" fill="#fff3c4"/></g>
     </g>
     <g class="candle" tabindex="0" role="button" aria-label="Свеча, нажми чтобы задуть или зажечь" data-i="4">
+      <rect class="hit" x="426" y="104" width="28" height="108" fill="transparent"/>
       <rect x="434" y="150" width="12" height="52" rx="3" fill="#9ad1f5"/>
       <line class="wick" x1="440" y1="150" x2="440" y2="144" stroke="#4a2c3d" stroke-width="2"/>
       <g class="flame-wrap"><ellipse class="flame" cx="440" cy="130" rx="7" ry="13" fill="#ffb347"/><ellipse class="flame" cx="440" cy="133" rx="3.5" ry="7" fill="#fff3c4"/></g>
@@ -239,7 +246,7 @@ candles.forEach(c => {
   });
 });
 
-cake.addEventListener('click', () => {
+document.getElementById('cake-body').addEventListener('click', () => {
   confetti(34);
   setMessage('Адия, это торт специально для тебя! 🎉');
 });
